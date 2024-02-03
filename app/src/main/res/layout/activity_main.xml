@@ -8,51 +8,76 @@
     android:orientation="vertical"
     android:background="#FFFCFE"
     android:gravity="center"
+    android:padding="16dp"
     tools:context=".MainActivity">
+
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Eg if your height is 6 feet 11 inch \n fill 6 in feet box and 11 in inch box"
+      android:text="E.g., if your height is 6 feet 11 inches,\nfill 6 in the feet box and 11 in the inch box"
       android:textColor="@color/black"
       android:textSize="15sp"
-      />
+      android:layout_marginBottom="16dp"/>
 
   <EditText
       android:id="@+id/edtWeight"
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
       android:ems="10"
       android:hint="Enter Your Weight"
       android:inputType="number" />
 
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
     <EditText
         android:id="@+id/edtHeightFt"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="4dp"
         android:ems="10"
         android:inputType="number"
-        android:hint="Enter Your Height in feet" />
-  <EditText
-      android:id="@+id/edtInHeight"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:ems="10"
-      android:inputType="number"
-      android:hint="Enter Your Height in inch" />
+        android:hint="Feet" />
+
+    <EditText
+        android:id="@+id/edtInHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="4dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Inches" />
+  </LinearLayout>
+
   <Button
       android:id="@+id/btnCalc"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
       android:backgroundTint="#1F1D36"
-      android:layout_marginTop="11dp"
-    android:text="CALCULATE BMI"/>
+      android:text="CALCULATE BMI"
+      android:textColor="#FFFFFF"/>
+
   <TextView
+      android:id="@+id/txtResult"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-    android:id="@+id/txtResult"
+      android:layout_marginTop="16dp"
+      android:text="Result"
       android:textColor="#451515"
-      android:layout_marginTop="11dp"
-      android:textSize="30sp"
-    android:text="Result"/>
+      android:textSize="30sp"/>
+  <TextView
+      android:id="@+id/bmiResult"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:textSize="20sp"
+      android:textStyle="bold"
+    android:text="XXX"/>
 
 </LinearLayout>
